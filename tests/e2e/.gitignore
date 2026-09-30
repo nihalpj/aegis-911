@@ -1,0 +1,4 @@
+artifacts/
+playwright-report/
+blob-report/
+.playwright/
