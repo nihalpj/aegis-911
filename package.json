@@ -1,0 +1,19 @@
+{
+  "name": "aegis-911",
+  "private": true,
+  "version": "0.1.0",
+  "description": "AI SOS call attending & emergency dispatch console (Twilio + AssemblyAI)",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
