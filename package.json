@@ -5,13 +5,18 @@
   "description": "AI SOS call attending & emergency dispatch console (Twilio + AssemblyAI)",
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "tests/e2e"
   ],
   "scripts": {
     "dev": "npm run dev --workspaces --if-present",
     "build": "npm run build --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
-    "lint": "npm run lint --workspaces --if-present"
+    "lint": "npm run lint --workspaces --if-present",
+    "infra:up": "docker compose -f infra/docker-compose.yml up -d $([ -f apps/server/Dockerfile ] && [ -f apps/web/Dockerfile ] && echo '--profile app' || true)",
+    "infra:down": "docker compose -f infra/docker-compose.yml down",
+    "infra:reset": "docker compose -f infra/docker-compose.yml down -v",
+    "test:e2e": "npm run e2e --workspace tests/e2e"
   },
   "engines": {
     "node": ">=22"

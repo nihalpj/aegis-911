@@ -1,0 +1,15 @@
+{
+  "name": "@aegis-911/e2e",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Playwright end-to-end tests for the AEGIS-911 dispatch console",
+  "scripts": {
+    "e2e": "playwright test",
+    "e2e:headed": "playwright test --headed",
+    "e2e:ui": "playwright test --ui",
+    "e2e:install": "playwright install --with-deps chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0"
+  }
+}
